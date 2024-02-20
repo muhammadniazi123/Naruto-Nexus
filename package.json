@@ -4,12 +4,11 @@
   "description": "Creating Naruto anime serach website",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "start": "/path/to/yarn start",
-    "build": "/path/to/yarn build"
-  }
-  
-  ,
+ "scripts": {
+  "start": "npm start",
+  "build": "npm run build"
+}
+ ,
   "author": "Muhammad Niazi",
   "license": "ISC",
   "dependencies": {
