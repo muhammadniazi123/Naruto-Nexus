@@ -5,9 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "build": "webpack --config webpack.config.js"
-  },
+    "start": "npm start",
+    "build": "npm run build"
+  }
+  ,
   "author": "Muhammad Niazi",
   "license": "ISC",
   "dependencies": {
