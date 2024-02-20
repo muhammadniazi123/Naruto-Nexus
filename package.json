@@ -5,9 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "npm start",
-    "build": "npm run build"
+    "start": "/path/to/yarn start",
+    "build": "/path/to/yarn build"
   }
+  
   ,
   "author": "Muhammad Niazi",
   "license": "ISC",
