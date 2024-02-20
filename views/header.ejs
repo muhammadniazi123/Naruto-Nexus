@@ -1,0 +1,34 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/public/styles.css">
+        <title>Naruto Nexus</title>
+    </head>
+    <body>
+        <header>
+        <h1>Naruto Nexus</h1>
+        <h2>Discover the rich lore of Naruto at Naruto Nexus – your ultimate destination for everything Naruto-related. From detailed character profiles to intricate family connections, explore the hidden secrets of the Hidden Leaf Village. Whether you're a seasoned fan or new to the series, begin your journey today and immerse yourself in the captivating world of Naruto!</h2>
+        <form action="/category" id="form" class="form" method="POST">    
+            <select name="category" id="category">
+                <option value="" data-display="Select">Random type</option>
+                <option value="Akatsuki">Akatsuki</option>
+                <option value="clan">Clan</option>
+                <option value="Characters">Characters</option>
+                <option value="kara">Kara</option>              
+                <option value="Kekkei-Genkai">Kekkei-Genkai</option>
+                <option value="Tailed-Beasts">Tailed-Beasts</option>
+                <option value="Teams">Teams</option>
+                <option value="Village">Village</option> 
+            </select>
+            <div class="input-field">
+                <input type="text" id="name" name="name" required style="padding-bottom: 14px; padding-top: 14px;" />
+                <label for="name"><strong>Name:</strong></label>
+            </div>
+            <input class="btn" type="submit" value="Submit">
+        </form>
+    </header>
+    </body>
+    </html>
+    

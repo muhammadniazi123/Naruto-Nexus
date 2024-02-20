@@ -1,0 +1,6 @@
+services:
+  - name: Naruto nexus
+    type: web
+    env: node
+    buildCommand: npm install
+    startCommand: node index.js

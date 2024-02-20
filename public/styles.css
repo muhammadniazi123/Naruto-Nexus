@@ -1,0 +1,287 @@
+body {
+  background-color: #3c5cb3;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* This ensures that the body takes up at least the full height of the viewport */
+}
+
+header {
+  background-color: #FE7A36;
+}
+
+footer {
+  background-color: #FE7A36;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-top: auto; /* This pushes the footer to the bottom of the page */
+}
+
+
+h1{
+    margin-top: 0;
+    padding: 20px 0;
+    padding-bottom: 5px;
+    font-size: 30px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+h2{
+    padding: 20px 10% ;
+    padding-top: 5px;
+    font-size: 20px;
+    text-align: center;    
+    color: #FFFFFF; ;
+}
+
+
+
+.card{
+    margin: 80px 30px; 
+    height: 400px;
+    width: 430px;
+    box-shadow: 0px 5px 10px 0px rgba(0,0, 0, 2);
+    transition: 0.5s;
+    background-color: #86A7FC;
+}
+.card:hover{
+    box-shadow: 0px 10px 20px 0px rgba(0,0, 0, 2);
+}
+.card-container{
+    padding: 2px 15px;
+}
+.form-card{
+  display: grid;
+  padding: 20px;
+  grid-template: 
+    "card-image card-display1 " auto
+    " . card-display2" auto
+    " . card-display3" auto
+    / 500px 1500px;
+  gap: 25px;
+  background-color: #3c5cb3;
+}
+form{
+    margin-top: 4%;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+}
+.card-display{
+    word-wrap: break-word;
+    margin:  20px;
+    height: auto;
+    
+    box-shadow: 0px 10px 15px 0px rgba(0,0, 0, 2);
+    transition: 0.5s;
+    padding:2%  ;
+    background-color: #86A7FC;
+}
+.card-display:hover{
+    box-shadow: 0px 15px 25px 0px rgba(0,0, 0, 2);
+}
+
+
+.btn {
+    border: 0;
+    margin: 0 3%;
+    -webkit-border-radius: 36;
+    -moz-border-radius: 36;
+    border-radius: 36px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 14px;
+    background: #280274;
+    padding: 10px 0px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #280274;
+    background-image: -webkit-linear-gradient(top, #280274, #E9F6FF);
+    background-image: -moz-linear-gradient(top, #280274, #E9F6FF);
+    background-image: -ms-linear-gradient(top, #280274, #E9F6FF);
+    background-image: -o-linear-gradient(top, #280274, #E9F6FF);
+    background-image: linear-gradient(to bottom, #280274, #E9F6FF);
+    text-decoration: none;
+  }
+  form {
+    margin: 15px;
+  }
+  .input-field {
+    position: relative;
+    height: 44px;
+    line-height: 44px;
+  }
+  label {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 100%;
+    color: #280274;
+    transition: 0.2s all;
+    cursor: text;
+  }
+  input {
+    width: 100%;
+    width:200px;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #d3d3d3;
+    box-shadow: none;
+    color: #111;
+  }
+  input:invalid {
+    outline: 0;
+    /* color: #ff2300;
+     border-color: #ff2300;*/
+  }
+  input:focus,
+  input:valid {
+    border-color: #280274;
+  }
+  input:focus~label,
+  input:valid~label {
+    font-size: 18px;
+    top: -35px;
+    color: #280274;
+  }
+  
+  select{
+    margin: 0 3%;
+    width: 200px;
+    height: 45px;
+    border: 0;
+    color: #280274;
+  }
+  input, select {
+    border-bottom: 2px solid #d3d3d3;
+}
+
+.card-image { grid-area: card-image; }
+.card-display1 { grid-area: card-display1; }
+.card-display2 { grid-area: card-display2; }
+.card-display3 { grid-area: card-display3; }
+
+
+
+/*tailed-beast*/
+.card-image { grid-area: card-image; }
+.card-display4 { grid-area: card-display4; }
+.card-display5 { grid-area: card-display5; }
+.card-display6 { grid-area: card-display6; }
+  
+.form-card-tailed-beast {
+  display: grid;
+  padding: 20px;
+  grid-template: 
+    "card-image card-display4 " auto
+    " . card-display5" auto
+    " . card-display6" auto
+    / 500px 1500px;
+    grid-template-rows: 500px ;
+  gap: 25px;
+  background-color: #3c5cb3;
+}
+
+/*error*/
+.error-container{
+  text-align: center;
+  padding: 20px;
+  justify-content: center;
+}
+
+.ul-error{
+  list-style-type:none;
+
+}
+/*kekkie-genkai,clan,team,village*/
+.id-container{
+  background-color:#3c5cb3 ;
+}
+.id-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+  margin: auto;
+}
+h5{
+  font-size: 20px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+img{
+  width: 100%; 
+  height: 330px;
+}
+
+@media screen and (max-width: 460px) {
+  header{
+    justify-content: center;
+    height: auto;
+  }
+  header h1{
+    font-size: 20px;
+  }
+  header h2{
+    font-size: 14px;
+  }
+  header select{
+    margin: 0;
+    margin-bottom: 20px;
+    width: 120px;
+    height: 30px;
+    justify-content: center;
+  }
+  header input{
+    width: 120px;
+    height: 1px;
+    justify-content: center;
+  }
+  header .btn{
+    margin: 0;
+    height: 35px;
+  }
+  header   input:focus~label,
+  input:valid~label {
+    font-size: 16px;
+    top: -25px;
+    color: #280274;
+  }
+
+
+  .id-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .card{
+    margin: 20px 30px; 
+    height: 280px;
+    width: 250px;
+    box-shadow: 0px 5px 10px 0px rgba(0,0, 0, 2);
+    transition: 0.5s;
+    background-color: #86A7FC;
+}
+
+  .container {
+      display: flex;
+      flex-direction: column;
+  }
+  img{
+    width: 250; 
+    height: 220px;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+  }
+  .form-card{
+    display: flex;
+    flex-direction: column;
+  }
+}

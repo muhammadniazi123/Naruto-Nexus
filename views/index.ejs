@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/styles.css">
+    <title>Naruto Nexus</title>
+</head>
+<body>
+<div class="container">
+   <%- include("header.ejs") %>
+    <div class="form-card">
+   <br>
+   <div class="card card-image">
+    <img src="<%= content.images[0] %>" alt="" >
+    <div class="card-container">
+        <h4>
+            <%= content.name %>
+        </h4>
+    </div>
+</div>
+<div class="card-display card-display1">
+    <h4 class="category-name">
+        <%= content.name %>
+    </h4>
+    <div class="card-info">
+        <ul>
+            <li>
+                <span class="card-birthdate">
+                <strong> birthdate:</strong>   
+                    <% if (Array.isArray(content.personal.birthdate)) { %>
+                        <ul>
+                            <% content.personal.birthdate.forEach(birthdate => { %>
+                                <li><%= birthdate %></li>
+                            <% }); %>
+                        </ul>
+                    <% } else if (content.personal.birthdate) { %>
+                        <%= content.personal.birthdate %>
+                    <% } else { %>
+                        No birthdate information available.
+                    <% } %>
+                </span>
+            </li>
+            <li>
+                <span class="card-family">
+                    <strong> Family:</strong>                   
+                    <% if (content.family) { %>
+                        <ul>
+                            <% Object.entries(content.family).forEach(([relationship, member]) => { %>
+                                <li><strong><%= relationship %>:</strong> <%= member %></li>
+                            <% }); %>
+                        </ul>
+                    <% } else { %>
+                        No family information available.
+                    <% } %>
+                </span>
+            </li>
+            <li>
+                <span class="card-clan">
+                    <strong>clan:</strong>
+                    <% if (Array.isArray(content.personal.clan)) { %>
+                        <ul>
+                            <% content.personal.clan.forEach(clan => { %>
+                                <li><%= clan %></li>
+                            <% }); %>
+                        </ul>
+                    <% } else if (content.personal.clan) { %>
+                        <%= content.personal.clan %>
+                    <% } else { %>
+                        No clan information available.
+                    <% } %>
+                </span>
+            </li>
+
+            <li>
+                <span class="card-occupation">
+                    <strong>occupation:</strong>
+                    <% if (Array.isArray(content.personal.occupation)) { %>
+                        <ul>
+                            <% content.personal.occupation.forEach(occupation => { %>
+                                <li><%= occupation %></li>
+                            <% }); %>
+                        </ul>
+                    <% } else if (content.personal.occupation) { %>
+                        <%= content.personal.occupation %>
+                    <% } else { %>
+                        No occupation information available.
+                    <% } %>
+                </span>
+            </li>
+
+            <li>
+                <span class="card-affiliation">
+                    <strong> Affiliation:</strong>                  
+                    <% if (Array.isArray(content.personal.affiliation)) { %>
+                        <ul>
+                            <% content.personal.affiliation.forEach(affiliation => { %>
+                                <li><%= affiliation %></li>
+                            <% }); %>
+                        </ul>
+                    <% } else if (content.personal.affiliation) { %>
+                        <%= content.personal.affiliation %>
+                    <% } else { %>
+                        No affiliation information available.
+                    <% } %>
+                </span>
+            </li>
+            <li>
+                <span class="card-classification">
+                    <strong> Classification:</strong>                 
+                    <% if (Array.isArray(content.personal.classification)) { %>
+                        <ul>
+                            <% content.personal.classification.forEach(classification => { %>
+                                <li><%= classification %></li>
+                            <% }); %>
+                        </ul>
+                    <% } else if (content.personal.classification) { %>
+                        <%= content.personal.classification %>
+                    <% } else { %>
+                        No classification information available.
+                    <% } %>
+                </span>
+            </li>
+            
+            <li>
+                <span class="card-kekkeiGenkai">
+                    <strong>kekkeiGenkai:</strong>
+                    <% if (Array.isArray(content.personal.kekkeiGenkai)) { %>
+                        <ul>
+                            <% content.personal.kekkeiGenkai.forEach(kekkeiGenkai => { %>
+                                <li><%= kekkeiGenkai %></li>
+                            <% }); %>
+                        </ul>
+                    <% } else if (content.personal.kekkeiGenkai) { %>
+                        <%= content.personal.kekkeiGenkai %>
+                    <% } else { %>
+                        Not a kekkeiGenkai.
+                    <% } %>
+                </span>
+            </li>
+            <li>
+                <span class="card-tailedBeast">
+                    <strong> tailedBeast:</strong>               
+                    <% if (Array.isArray(content.personal.tailedBeast)) { %>
+                        <ul>
+                            <% content.personal.tailedBeast.forEach(tailedBeast => { %>
+                                <li><%= tailedBeast %></li>
+                            <% }); %>
+                        </ul>
+                    <% } else if (content.personal.tailedBeast) { %>
+                        <%= content.personal.tailedBeast %>
+                    <% } else { %>
+                        No tailedBeast information available.
+                    <% } %>
+                </span>
+            </li>
+            <!-- Add similar checks for other properties -->
+        </ul>
+    </div>
+</div>
+
+<div class="card-display  card-display2">
+    <div class="card-info">
+        <ul>
+            <li>
+                <span class="card-team">
+                    <strong>  team:</strong>              
+                    <% if (Array.isArray(content.personal.team)) { %>
+                        <ul>
+                            <% content.personal.team.forEach(team => { %>
+                                <li><%= team %></li>
+                            <% }); %>
+                        </ul>
+                    <% } else if (content.personal.team) { %>
+                        <%= content.personal.team %>
+                    <% } else { %>
+                        No team information available.
+                    <% } %>
+                </span>
+            </li>
+
+            <li>
+                <span class="card-titles">
+                    <strong>titles:</strong>
+                    <% if (Array.isArray(content.personal.titles)) { %>
+                        <ul>
+                            <% content.personal.titles.forEach(titles => { %>
+                                <li><%= titles %></li>
+                            <% }); %>
+                        </ul>
+                    <% } else if (content.personal.titles) { %>
+                        <%= content.personal.titles %>
+                    <% } else { %>
+                        No titles information available.
+                    <% } %>
+                </span>
+            </li>
+
+            <li>
+                <span class="card-rank">
+                    <strong> Rank:</strong>
+                    <% if (content.rank) { %>
+                        <ul>
+                            <% Object.entries(content.rank).forEach(([key, value]) => { %>
+                                <li><strong><%= key %>:</strong>
+                                    <% if (typeof value === 'object') { %>
+                                        <ul>
+                                            <% Object.entries(value).forEach(([subKey, subValue]) => { %>
+                                                <li><strong><%= subKey %>:</strong> <%= subValue %></li>
+                                            <% }); %>
+                                        </ul>
+                                    <% } else { %>
+                                        <%= value %>
+                                    <% } %>
+                                </li>
+                            <% }); %>
+                        </ul>
+                    <% } else { %>
+                        No rank information available.
+                    <% } %>
+                </span>
+            </li>
+            <li>
+                <span class="card-tools">
+                    <strong>tools:</strong>                   
+                        <% if (content.tools) { %>
+                        <ul>
+                            <% content.tools.forEach(tools => { %>
+                            <li><%= tools %></li>
+                            <% }); %>
+                        </ul>
+                        <% } else { %>
+                        didn't use any tools.
+                        <% } %></li>
+                </span>
+            </li>
+            <!-- Add similar checks for other properties -->
+        </ul>
+    </div>
+</div>
+
+<div class="card-display card-display3">
+            <div class="card-info">
+                
+                <span class="card-jutsu">
+                    <strong>  Jutsu:</strong>  
+            <% if (content.jutsu) { %>
+                <ul>
+                    <% content.jutsu.forEach(jutsu => { %>
+                        <li><%= jutsu %></li>
+                    <% }); %>
+                </ul>
+            <% } else { %>
+                No jutsu information available.
+            <% } %></li>
+            </span>
+              </div>
+    </div>
+</div>
+     
+<%- include("footer.ejs") %>
+
+</div>
+</body>
+</html>

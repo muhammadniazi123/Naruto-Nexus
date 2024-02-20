@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/styles.css">
+    <title>Naruto Nexus</title>
+</head>
+<body>
+   <div> 
+    <%- include("header.ejs") %>
+    <h5><%= heading %>: <%=type %></h5>
+    <div class="id-container">   
+        <% content.forEach(character => { %>
+            <div class="card ">
+                <% if (character.images && character.images.length > 0) { %>
+                <img src="<%= character.images %>" alt="" >
+                <% } else { %>
+                    <img src="/public/images/no-image.jpg" alt="">
+                    <% } %>
+                <div class="card-container">
+                    <h4>
+                        <%= character.names %>
+                    </h4>
+                </div>
+            </div>
+          <% }); %>
+    </div>
+    <%- include("footer.ejs") %>
+</div>
+</body>
+</html>

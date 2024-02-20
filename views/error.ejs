@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/styles.css">
+    <title>Naruto Nexus</title>
+</head>
+<body>
+    <%- include("header.ejs") %>
+    <div class="error-container">
+        <h3>Sorry, the requested information was not found.</h3>
+        <p>Possible causes for this error:</p>
+    <ul class="ul-error">
+        <li>- Submitting a name with an incorrect category selection.</li>
+        <li>- Spelling mistake in the name or category.</li>
+        <li>- The requested entity does not exist in the database.</li>
+        <li>- Temporary unavailability of the data source.</li>
+        <li>- Network issues preventing data retrieval.</li>
+    </ul>
+    <p>Please check your input and try again.</p>
+    </div>    
+    <%- include("footer.ejs") %>
+</body>
+</html>
