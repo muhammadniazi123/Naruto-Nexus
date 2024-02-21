@@ -1,11 +1,3 @@
-body {
-  background-color: #3c5cb3;
-  font-family: "Architects Daughter", cursive;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* This ensures that the body takes up at least the full height of the viewport */
-}
 .architects-daughter-regular {
   font-family: "Architects Daughter", cursive;
   font-weight: 400;
@@ -16,10 +8,18 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-
+body {
+  background-color: #3c5cb3;
+  font-family: "Architects Daughter", cursive;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* This ensures that the body takes up at least the full height of the viewport */
+}
 
 header {
   background-color: #FE7A36;
+  width: 100%; /* Set the width to 100% of the parent container */
 }
 
 footer {
@@ -28,7 +28,11 @@ footer {
   padding-bottom: 10px;
   padding-top: 10px;
   margin-top: auto; /* This pushes the footer to the bottom of the page */
+  width: 100%; /* Set the width to 100% of the parent container */
 }
+
+
+
 
 
 h1{
@@ -98,6 +102,7 @@ form{
 
 
 .btn {
+  
     border: 0;
     margin: 0 3%;
     -webkit-border-radius: 36;
@@ -109,6 +114,7 @@ form{
     background: #280274;
     padding: 10px 0px;
     text-decoration: none;
+    font-family: "Architects Daughter", cursive;
   }
   
   .btn:hover {
@@ -240,6 +246,7 @@ img{
   header{
     justify-content: center;
     height: auto;
+     width: 100vw; 
   }
   header h1{
     font-size: 20px;
@@ -278,7 +285,7 @@ img{
   .card{
     margin: 20px 30px; 
     height: 280px;
-    width: 250px;
+    width: 210px;
     box-shadow: 0px 5px 10px 0px rgba(0,0, 0, 2);
     transition: 0.5s;
     background-color: #86A7FC;
@@ -292,6 +299,9 @@ img{
     width: 250; 
     height: 220px;
   }
+  .card-display{
+    width: 90%;
+  }
   form{
     display: flex;
     flex-direction: column;
@@ -301,3 +311,4 @@ img{
     flex-direction: column;
   }
 }
+
