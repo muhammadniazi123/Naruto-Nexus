@@ -1,4 +1,3 @@
-Sure, here's a template for a README file for your GitHub repository:
 
 ```
 # Naruto Nexus
